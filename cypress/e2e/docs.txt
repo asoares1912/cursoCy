@@ -1,0 +1,3 @@
+Usuário: Usuário Curso Cypress
+E-mail: cypress@teste.com.br
+senha: 123456

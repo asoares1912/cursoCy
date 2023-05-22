@@ -1,0 +1,16 @@
+{
+  "name": "cursocy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^12.11.0",
+    "eslint": "^8.40.0",
+    "eslint-plugin-cypress": "^2.13.3"
+  }
+}
