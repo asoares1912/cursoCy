@@ -8,9 +8,9 @@ describe('API - PROFILE', () => {
             }).then(({status, duration, body}) => {
                 expect(status, 'Status Code').to.eq(200)
                 expect(duration, 'Duração').to.be.lessThan(1000)
-                expect(body[0].status, 'Cargo usúario 0').to.eq('QA Junior')
-                expect(body[1].user.name).to.eq('Iterasys')
-                expect(body[0].skills).to.be.have.lengthOf(4)
+                expect(body[0].status, 'Cargo usúario 0').to.eq('Gerente de Testes')
+                expect(body[1].user.name).to.eq('Usuário Curso Cypress')
+                expect(body[0].skills).to.be.have.lengthOf(2)
                 expect(body[0].date).to.not.be.null
                 
                 // cy.writeFile('cypress/fixtures/user.json', body[1].user)
@@ -28,7 +28,7 @@ describe('API - PROFILE', () => {
             let usuarioId = '1'
 
             cy.request({
-                method: method,
+                method,
                 url: `${urlApiPerfil}/${usuarioId}`,
                 failOnStatusCode: false
 
