@@ -1,6 +1,9 @@
 describe('Alerta de login', () => {
     
     it('valida o alerta de credecial invalida', () => {
+        
+        // interceptando 
+        cy.clock()
 
         cy.intercept('POST', '/api/auth')
             .as ('login')
@@ -29,8 +32,11 @@ describe('Alerta de login', () => {
         // cy.wait(10000)
 
         // cy.getElement('alert')
-        cy.get('[data-test=alert]', { timeout: 10000})
-            .should('not.exist')
+        // cy.get('[data-test=alert]', { timeout: 10000})
+        // .should('not.exist')
+        
+        cy.tick(10000)
+        cy.getElement('alert')
+            .should('not.exist')     
     })
-    
 })
