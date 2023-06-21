@@ -7,7 +7,7 @@ describe('página de login', () => {
     before(() => {
         cy.visit('/login')
     })
-    it('faz o login valido', () => {
+    it('faz o login valido',{tags: ['@login','@smoke']}, () => {
 
         // spay na apia login
         cy.intercept('GET','/api/profile/me')
@@ -37,7 +37,7 @@ describe('página de login', () => {
             .and('contain','Usuário Curso Cypress')
     })
 
-    it('faz o login inválido', () => {
+    it('faz o login inválido', {tags: '@login'}, () => {
         // spy na API do login
         cy.intercept('POST', '/api/auth')
             .as('apiLogin')

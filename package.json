@@ -13,5 +13,7 @@
     "eslint": "^8.40.0",
     "eslint-plugin-cypress": "^2.13.3"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@cypress/grep": "^3.1.5"
+  }
 }

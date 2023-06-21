@@ -1,6 +1,6 @@
 describe('Alerta de login', () => {
     
-    it('valida o alerta de credecial invalida', () => {
+    it('valida o alerta de credecial invalida', {tags:['@smoke','@login']}, () => {
         
         // interceptando 
         cy.clock()
@@ -30,7 +30,6 @@ describe('Alerta de login', () => {
             .should('have.text', 'Credenciais inválidas')
             
         // cy.wait(10000)
-
         // cy.getElement('alert')
         // cy.get('[data-test=alert]', { timeout: 10000})
         // .should('not.exist')
